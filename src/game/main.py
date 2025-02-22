@@ -15,7 +15,7 @@ a.grid(row=0, column=0, padx=5, pady=5)
 clock = 0
 filler_zero = ""
 #number of increments per hour
-interval = 20
+interval = 6
 for i in range(interval * 24):
     clock += 1 / interval
     #adds a 0 to the display for single-digit minutes
