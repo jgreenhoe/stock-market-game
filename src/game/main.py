@@ -13,9 +13,8 @@ a.grid(row=0, column=0, padx=5, pady=5)
 
 #clock = hour.minute
 clock = 0
-filler_zero = ""
 #number of increments per hour
-interval = 6
+interval = 15
 while(1):
     for i in range(interval * 24):
         #rounds clock when it should be an integer to avoid floating point inaccuracy
@@ -26,7 +25,7 @@ while(1):
             filler_zero = 0
         else:
             filler_zero = ""
-        a.config(text = f"{math.floor(clock)}:{filler_zero}{round(clock % 1 * 60)} {clock}")
+        a.config(text = f"{math.floor(clock)}:{round(clock % 1 * 60):02d} {clock}")
         root.update()
         clock += 1 / interval
         time.sleep(1)
